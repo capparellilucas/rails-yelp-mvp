@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :restaurants, only: [:index, :create, :new, :show] do
-    collection do
+    # member do
       resources :reviews, only: [:index, :create, :new]
-    end
+    # end
   end
 
 end

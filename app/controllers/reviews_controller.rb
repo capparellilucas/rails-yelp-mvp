@@ -2,7 +2,8 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new # Needed to instantiate the form_with
-    @restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @review.restaurant_id = @restaurant.id
   end
 
   def create
