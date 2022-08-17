@@ -3,3 +3,10 @@
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
+
+<% @restaurant.reviews.each do |review| %>
+<p><%= review.rating%> - <%= review.content%> </p>
+<% end %>
+
+
+<%= link_to "nueva reseña", new_review_path(@restaurant)%>
