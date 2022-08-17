@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Star Wars restaurant franchise</h1>
+
+
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li> id: <%= restaurant.id %> - <%= link_to restaurant.name, restaurant_path(restaurant) %> - <%= restaurant.address %> - <%= restaurant.phone_number %> - <%= restaurant.category %></li>
+    <% end %>
+    <li> <%= link_to "nuevo restaurant", new_restaurant_path %> </li>
+  </ul>
+
+
+
+</div>
